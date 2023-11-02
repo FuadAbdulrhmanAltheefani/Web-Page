@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Third Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Styles.css">
+    <!-- Center tag to center the element -->
+    <center><img id="logoimg"><img src="../Images/logo.jpg"></center>
+    <!-- Unorderd list for navigation -->
+    <ul class="topnav">
+      <li><a href="../Index.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Contact Us.html">Contact Us</a></li>
+      <li><a href="Last Page.html">Last Page</a></li>
+    </ul>
+</head>
+
+<body>
+<center>
+<section class="form" id="formContainer">
+    <form id="boxForm">
+        
+            <div class="input">
+                <span>Your name</span>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input">
+                <span>Your ID</span>
+                <input type="number" id="number" placeholder="Enter your ID" required>
+            </div>
+    
+            <div class="input">
+                <span>Your department</span>
+                <input type="text" id="department" placeholder="Enter Department name" required>
+            </div>
+
+            <div class="input">
+                <span>Your trainer</span>
+                <input type="text" id="trainer" placeholder="Enter your coach name" required>
+            </div>
+        
+            <div class="input">
+                <span>Your weight</span>
+                <input type="number" id="weight" placeholder="Enter your weight" required>
+            </div>
+
+            <div class="input">
+                <span>Begeining date</span>
+                <input type="datetime-local" id="date" required>
+            </div>
+            
+            <div>
+                <span>Your address</span>
+                <input type="text" id="address" placeholder="Enter your address" required>
+            </div>
+    
+            <div class="input">
+                <span id="messageCSS">Your message</span>
+                <textarea placeholder="Enter your message" id="message" cols="25" rows="10" required></textarea>
+            </div>
+        
+        <button type="submit" class="btn">Send</button> 
+    </form>
+</section>
+</center>
+
+<center>
+<table id="table">
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th>Department</th>
+      <th>Trainer</th>
+      <th>Weight</th>
+      <th>Date</th>
+      <th>Address</th>
+      <th>Message</th>
+    </tr>
+</table>
+</center>
+
+<center>
+  <h2 id="thanksMessage">Thanks, Happy to serve you.</h2>
+</center>
+
+  <footer >
+    <div>
+      <h3><em>Our Links</em></h3>
+        <ul>
+          <li> <a id="Facebook" href="www.Facebook.com">Facebook</a> </li>
+          <li> <a id="YouTube" href="www.YouTube.com">YouTube</a> </li>
+          <li> <a id="Instgram" href="www.Instgram.com">Instgram</a> </li>
+        </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('boxForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+   // Get form values
+    const name = document.getElementById('name').value;       
+    const number = document.getElementById('number').value;
+    const department = document.getElementById('department').value;
+    const trainer = document.getElementById('trainer').value;
+    const weight = document.getElementById('weight').value;
+    const date = document.getElementById('date').value;
+    const address = document.getElementById('address').value;
+    const message = document.getElementById('message').value;
+
+    // Create new table row
+    const newRow = document.createElement('tr');
+    // Create table cells
+    const nameCell = document.createElement('td');       
+    const numberCell = document.createElement('td');
+    const departmentCell = document.createElement('td');
+    const trainerCell = document.createElement('td');
+    const weightCell = document.createElement('td');
+    const dateCell = document.createElement('td');
+    const addressCell = document.createElement('td');
+    const messageCell = document.createElement('td');
+
+    // Set cell values
+    nameCell.textContent = name;
+    numberCell.textContent = number;
+    departmentCell.textContent = department;
+    trainerCell.textContent = trainer;
+    weightCell.textContent = weight;
+    dateCell.textContent = date;
+    addressCell.textContent = address;
+    messageCell.textContent = message;
+
+    // Append cells to row
+    newRow.appendChild(nameCell);
+    newRow.appendChild(numberCell);
+    newRow.appendChild(departmentCell);
+    newRow.appendChild(trainerCell);
+    newRow.appendChild(weightCell);
+    newRow.appendChild(dateCell);
+    newRow.appendChild(addressCell);
+    newRow.appendChild(messageCell);
+
+    // Append row to table
+    document.getElementById('table').appendChild(newRow);
+
+    // Reset form
+    document.getElementById('boxForm').reset();
+});</script>
+
+</div>
+</body>
+</html>

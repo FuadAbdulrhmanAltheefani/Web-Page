@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Seconed Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Center tag to center the element -->
+  <center><img id="logoimg"><img src="../Images/logo.jpg"></center>
+  <!-- Unorderd list for navigation -->
+  <ul class="topnav">
+    <li><a href="../Index.html">Home</a></li>
+    <li><a href="About Us.html">About Us</a></li>
+    <li><a href="Contact Us.html">Contact Us</a></li>
+    <li><a href="Last Page.html">Last Page</a></li>
+  </ul>
+  <link rel="stylesheet" href="../CSS/Styles.css">
+  <!-- JS code to show the form after clicking the bottun -->
+  <script>
+    function showForm() {
+      document.getElementById("communicationForm").style.display = "block";
+    }
+    function submitForm() {
+      document.getElementById("successMessage").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <section id="aboutUs">
+    <h2 id="AU">About Us</h2>
+    <!-- Center div for a paragraph about us -->
+    <center>
+    <div id="aboutText">In our gym, We have the best sprts tolls and high experiences coaches, Our gym is placed in great enviroment and it has a wide area.</div>
+    </center>
+    <!-- Communication form appears aftr clicking the bottun -->
+    <button id="bttn" onclick="showForm()">Contact Us</button>
+    <center>
+    <form id="communicationForm" class="hidden">
+      <input type="text" placeholder="Name" required><br>
+      <input type="email" placeholder="Email" required><br>
+      <input type="tel" placeholder="Phone" required><br>
+      <input type="text" placeholder="Subject" required><br>
+      <textarea placeholder="Message" required></textarea><br>
+      <input type="checkbox" required> I agree to the terms and conditions<br>
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    </center>
+    <!-- Thanks message appears after submitting bottun -->
+    <div id="successMessage" class="hidden">
+      <p>Thanks for the communication!</p>
+    </div>
+  </section>
+  <footer >
+    <div>
+      <h3><em>Our Links</em></h3>
+        <ul>
+          <li> <a id="Facebook" href="www.Facebook.com">Facebook</a> </li>
+          <li> <a id="YouTube" href="www.YouTube.com">YouTube</a> </li>
+          <li> <a id="Instgram" href="www.Instgram.com">Instgram</a> </li>
+        </ul>
+    </div>
+  </footer>
+</body>
+</html>
